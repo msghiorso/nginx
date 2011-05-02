@@ -8,6 +8,7 @@ As our production environment is moving from Apache to Nginx, it makes more sens
 
 If you're system is not new and you already have a ```/usr/local```, your permissions may get in the way. Correct that by running:
 
+	[[ ! -d /usr/local ]] && sudo mkdir /usr/local
 	sudo chown -R $USER /usr/local
 
 Install Homebrew:
