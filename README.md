@@ -23,6 +23,7 @@ Then add the following to your ~/.bash_profile:
 ## Step 3: Install [Homebrew](http://mxcl.github.com/homebrew/)
 If you're system is not new and you already have a ```/usr/local```, your permissions may get in the way. Correct that by running:
 
+	[[ ! -d /usr/local ]] && sudo mkdir /usr/local
 	sudo chown -R $USER /usr/local
 	ruby -e "$(curl -fsSLk https://gist.github.com/raw/323731/install_homebrew.rb)"
 
