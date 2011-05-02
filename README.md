@@ -47,7 +47,7 @@ Install the start-up plist:
 
 	cp /usr/local/Cellar/nginx/`ls -1 /usr/local/Cellar/nginx| tail -n 1`/org.nginx.plist ~/Library/LaunchAgents
 
-## Step 5: MongoDB [MongoDB](http://mongodb.org/)
+## Step 5: Install [MongoDB](http://mongodb.org/)
 
 If you previously had MongoDB installed you will need to unload mongodb and remove the launch daemon. Correct that by running:
 
@@ -58,17 +58,7 @@ Install MongoDB:
 
 	brew install mongodb
 
-Read the Caveats after installation about installing or upgrading the launch daemon.
-
-If this is your first install, automatically load on login with:
-	mkdir -p ~/Library/LaunchAgents
-	cp /usr/local/Cellar/mongodb/1.8.1-x86_64/org.mongodb.mongod.plist ~/Library/LaunchAgents/
-	launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
-
-If this is an upgrade and you already have the org.mongodb.mongod.plist loaded:
-	launchctl unload -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
-	cp /usr/local/Cellar/mongodb/1.8.1-x86_64/org.mongodb.mongod.plist ~/Library/LaunchAgents/
-	launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
+Read the Caveats presented after installation about installing or upgrading the launch daemon.
 
 Check that MongoDB is running:
 
