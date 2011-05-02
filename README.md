@@ -4,23 +4,8 @@ As our production environment is moving from Apache to Nginx, it makes more sens
 
 (Most of the following assumes you already have Xcode installed on your system. If not, go grab it from [[http://developer.apple.com/]] or the Mac App Store, though the latter costs $4.99.)
 
-## Step 1: Install [RVM](https://rvm.beginrescueend.com/) and [Passenger](http://www.modrails.com/)
+## Step 1: Install [Homebrew](http://mxcl.github.com/homebrew/)
 
-	bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
-
-Then add the following to your ~/.bash_profile:
-
-	'[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-## Step 2: Install [Ruby Enterprise Edition](http://www.rubyenterpriseedition.com/)
-
-	rvm install ree
-	. $HOME/.rvm/scripts/rvm
-	rvm install ree
-	rvm use ree
-	gem install passenger
-
-## Step 3: Install [Homebrew](http://mxcl.github.com/homebrew/)
 If you're system is not new and you already have a ```/usr/local```, your permissions may get in the way. Correct that by running:
 
 	sudo chown -R $USER /usr/local
@@ -29,6 +14,22 @@ If you're system is not new and you already have a ```/usr/local```, your permis
 If you did have an existing ```/usr/local```, you can see if there are any problems from what you already have in there by running:
 
 	brew doctor
+
+## Step 2: Install [RVM](https://rvm.beginrescueend.com/)
+
+	bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+
+Then add the following to your ~/.bash_profile:
+
+	'[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+## Step 2: Install [Ruby Enterprise Edition](http://www.rubyenterpriseedition.com/) and [Passenger](http://www.modrails.com/)
+
+	rvm install ree
+	. $HOME/.rvm/scripts/rvm
+	rvm install ree
+	rvm use ree
+	gem install passenger
 
 ## Step 4: Install [Nginx](http://wiki.nginx.org/)
 
