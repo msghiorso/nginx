@@ -6,8 +6,12 @@ As our production environment is moving from Apache to Nginx, it makes more sens
 
 ## Step 1: Install [Homebrew](http://mxcl.github.com/homebrew/)
 
-	[[ ! -d /usr/local ]] && sudo mkdir /usr/local
+If you're system is not new and you already have a ```/usr/local```, your permissions may get in the way. Correct that by running:
+
 	sudo chown -R $USER /usr/local
+
+Install Homebrew:
+
 	ruby -e "$(curl -fsSLk https://gist.github.com/raw/323731/install_homebrew.rb)"
 
 If you did have an existing ```/usr/local```, you can see if there are any problems from what you already have in there by running:
@@ -24,7 +28,6 @@ Then add the following to your ~/.bash_profile:
 
 ## Step 3: Install [Ruby Enterprise Edition](http://www.rubyenterpriseedition.com/) and [Passenger](http://www.modrails.com/)
 
-	rvm install ree
 	. $HOME/.rvm/scripts/rvm
 	rvm install ree
 	rvm use ree
@@ -43,11 +46,38 @@ Install the start-up plist:
 
 	cp /usr/local/Cellar/nginx/`ls -1 /usr/local/Cellar/nginx| tail -n 1`/org.nginx.plist ~/Library/LaunchAgents
 
-## Step 5: Install [MySQL](http://mysql.org/)
+## Step 5: MongoDB [MongoDB](http://mongodb.org/)
+
+If you previously had MongoDB installed you will need to unload mongodb and remove the launch daemon. Correct that by running:
+
+	sudo launchctl unload /Library/LaunchDaemons/org.mongodb.mongod.plist
+	sudo rm -r /Library/LaunchDaemons/org.mongodb.mongod.plist
+
+Install MongoDB:
+
+	brew install mongodb
+
+Read the Caveats after installation about installing or upgrading the launch daemon.
+
+If this is your first install, automatically load on login with:
+	mkdir -p ~/Library/LaunchAgents
+	cp /usr/local/Cellar/mongodb/1.8.1-x86_64/org.mongodb.mongod.plist ~/Library/LaunchAgents/
+	launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
+
+If this is an upgrade and you already have the org.mongodb.mongod.plist loaded:
+	launchctl unload -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
+	cp /usr/local/Cellar/mongodb/1.8.1-x86_64/org.mongodb.mongod.plist ~/Library/LaunchAgents/
+	launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
+
+Check that MongoDB is running:
+
+	http://localhost:28017/
+
+## Step 6: Install [MySQL](http://mysql.org/)
 
 	brew install mysql
 
-## Step 6: Install [PHP](http://php.net/) (optionally, but recommended) and [spawn-fcgi](http://redmine.lighttpd.net/projects/spawn-fcgi)
+## Step 7: Install [PHP](http://php.net/) (optionally, but recommended) and [spawn-fcgi](http://redmine.lighttpd.net/projects/spawn-fcgi)
 
 	brew create 5.2.17
 
@@ -63,7 +93,7 @@ Download a launchctl plist file to ensure this PHP server is running:
 	curl -O https://gist.github.com/raw/945447/724201ab0d5e2834eafae0444aa9c2e5ee977f3e/net.lighttpd.spawn-fcgi.plist
 	launchctl load -w ~/Library/LaunchAgents/net.lighttpd.spawn-fcgi.plist
 
-## Step 7: Back to nginx
+## Step 8: Back to nginx
 
 Let's now replace the stock config with what we've got in this repo:
 
