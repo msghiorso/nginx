@@ -116,3 +116,11 @@ Nginx runs under your own user, so it can't use a privileged port. Instead it ru
 	sudo curl -O https://gist.github.com/raw/945906/d817356fb5db195c7c4c46fd39f5f5cac6db6e8f/com.coverallcrew.firewall.plist
 	sudo launchctl load -w com.coverallcrew.firewall.plist
 
+# Upstreams
+
+If you look in ```/usr/local/etc/nginx/upstreams```, you will see all of the "upstreams", or "proxies" we have defined. Note that the *attendease* API is set to run on port 4000, and so to start that up on that port, run:
+
+	cd /usr/local/sites/attendease
+	rails s -p 4000
+
+
