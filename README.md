@@ -118,7 +118,7 @@ Nginx runs under your own user, so it can't use a privileged port. Instead it ru
 
 If you want an easy way to restart nginx, add the following to your ~/.bash_profile file:
 
-	alias restart-nginx='kill `cat /usr/local/var/run/nginx.pid`'
+	alias restart-nginx="kill \`cat /usr/local/var/run/nginx.pid\`"
 
 # Upstreams
 
