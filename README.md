@@ -74,11 +74,11 @@ Note the instructions for copying the .plist file if you want to have MySQL auto
 
 	brew create php-5.2.17
 
-When an editor is opened up with the "formula", replace it with the contents of [[https://gist.github.com/raw/945421/afe20aa920d7cab5ebb75150ae6084080c7f0334/php.rb]].
+When an editor is opened up with the "formula", replace it with the contents of [[https://gist.github.com/raw/945421/607ab7931525ba9447c0348c328439a584d97ac7/php.rb]].
 
 Next, Install PHP
 
-	brew install php
+	brew install php --with-mysql
 
 Then install spawn-fcgi:
 
