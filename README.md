@@ -13,7 +13,7 @@ If you're system is not new and you already have a ```/usr/local```, your permis
 
 Install Homebrew:
 
-	ruby -e "$(curl -fsSLk https://gist.github.com/raw/323731/install_homebrew.rb)"
+	ruby -e "$(curl -fsSLk ruby -e "$(curl -fsSL https://raw.github.com/gist/323731/39fc1416e34b9f6db201b4a026181f4ceb7cfa74)")"
 
 If you did have an existing ```/usr/local```, you can see if there are any problems from what you already have in there by running:
 
