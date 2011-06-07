@@ -72,7 +72,7 @@ Note the instructions for copying the .plist file if you want to have MySQL auto
 
 ## Step 7: Install [PHP](http://php.net/) (optionally, but recommended) and [spawn-fcgi](http://redmine.lighttpd.net/projects/spawn-fcgi)
 
-	brew create php-5.2.17
+	brew create http://ca2.php.net/distributions/php-5.2.17.tar.gz
 
 When an editor is opened up with the "formula", replace it with the contents of [[https://gist.github.com/raw/945421/607ab7931525ba9447c0348c328439a584d97ac7/php.rb]].
 
