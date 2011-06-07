@@ -87,7 +87,7 @@ Then install spawn-fcgi:
 Download a launchctl plist file to ensure this PHP server is running:
 
 	cd ~/Library/LaunchAgents
-	curl -O https://gist.github.com/raw/945447/724201ab0d5e2834eafae0444aa9c2e5ee977f3e/net.lighttpd.spawn-fcgi.plist
+	curl https://raw.github.com/gist/945447/724201ab0d5e2834eafae0444aa9c2e5ee977f3e > net.lighttpd.spawn-fcgi.plist
 	launchctl load -w ~/Library/LaunchAgents/net.lighttpd.spawn-fcgi.plist
 
 ## Step 8: Back to nginx
