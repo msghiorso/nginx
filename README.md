@@ -45,7 +45,7 @@ Install the start-up plist:
 		mkdir ~/Library/LaunchAgents
 	fi
 
-	cp /usr/local/Cellar/nginx/`ls -1 /usr/local/Cellar/nginx| tail -n 1`/org.nginx.plist ~/Library/LaunchAgents
+	cp /usr/local/Cellar/nginx/`ls -1 /usr/local/Cellar/nginx| tail -n 1`/org.nginx.nginx.plist ~/Library/LaunchAgents
 
 ## Step 5: Install [MongoDB](http://mongodb.org/)
 
