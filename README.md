@@ -110,6 +110,8 @@ Now start it up with launchctl:
 
 	launchctl load -w ~/Library/LaunchAgents/org.nginx.nginx.plist
 
+### Step 8(a): Port 80 Forwarding (optional, but recommended)
+
 Nginx runs under your own user, so it can't use a privileged port. Instead it runs on port 8080. You may want to have it run on port 80, and if so you can add a simple firewall script to forward the port. (This is totally optional.)
 
 	cd /Library/LaunchDaemons
