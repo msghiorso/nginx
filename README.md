@@ -115,7 +115,7 @@ Now start it up with launchctl:
 Nginx runs under your own user, so it can't use a privileged port. Instead it runs on port 8080. You may want to have it run on port 80, and if so you can add a simple firewall script to forward the port. (This is totally optional.)
 
 	cd /Library/LaunchDaemons
-	sudo curl -O https://gist.github.com/raw/945906/d817356fb5db195c7c4c46fd39f5f5cac6db6e8f/com.coverallcrew.firewall.plist
+	sudo curl -O https://raw.github.com/gist/945906/d817356fb5db195c7c4c46fd39f5f5cac6db6e8f/com.coverallcrew.firewall.plist
 	sudo launchctl load -w com.coverallcrew.firewall.plist
 
 If you want an easy way to restart nginx, add the following to your ~/.bash_profile file:
