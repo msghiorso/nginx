@@ -76,6 +76,10 @@ Check that MongoDB is running:
 
 When an editor is opened up with the "formula", replace it with the contents of [[https://gist.github.com/raw/945421/607ab7931525ba9447c0348c328439a584d97ac7/php.rb]].
 
+If libpng is somehow broken (like Jamie's)
+
+	brew install https://raw.github.com/mxcl/homebrew/fa2f6383296fde9c9eb9182b25c1f7ac91a93364/Library/Formula/libpng.rb
+
 Next, Install PHP
 
 	brew install php --with-mysql
