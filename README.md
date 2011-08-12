@@ -30,7 +30,7 @@ Then add the following to your ~/.bash_profile:
 ## Step 3: Install [Ruby Enterprise Edition](http://www.rubyenterpriseedition.com/) and [Passenger](http://www.modrails.com/)
 
 	. $HOME/.rvm/scripts/rvm
-	rvm install ree
+	rvm install --force ree
 	rvm use ree
 	gem install passenger
 
