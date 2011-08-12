@@ -1,5 +1,7 @@
 # Getting Started
 
+## Please note these instructions have been updated for Mac OS X Lion, and assumes this is what you are running. If you are not, you may need to refer to an older version of this document.
+
 As our production environment is moving from Apache to Nginx, it makes more sense for our development environments to closely mirror that environment. It's going to be a bit of a journey to get there, so let's get started.
 
 (Most of the following assumes you already have Xcode installed on your system. If not, go grab it from [[http://developer.apple.com/]] or the Mac App Store, though the latter costs $4.99.)
@@ -76,11 +78,7 @@ Check that MongoDB is running:
 
 	brew create http://ca2.php.net/distributions/php-5.2.17.tar.gz
 
-When an editor is opened up with the "formula", replace it with the contents of [[https://gist.github.com/raw/945421/607ab7931525ba9447c0348c328439a584d97ac7/php.rb]].
-
-If libpng is somehow broken (like Jamie's)
-
-	brew install https://raw.github.com/mxcl/homebrew/fa2f6383296fde9c9eb9182b25c1f7ac91a93364/Library/Formula/libpng.rb
+When an editor is opened up with the "formula", replace it with the contents of [[https://raw.github.com/gist/1142557/9f5232aa169c121d605292c8062329a1f8132f55/php.rb]].
 
 Next, Install PHP
 
