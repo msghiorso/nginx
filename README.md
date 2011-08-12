@@ -4,7 +4,7 @@
 
 As our production environment is moving from Apache to Nginx, it makes more sense for our development environments to closely mirror that environment. It's going to be a bit of a journey to get there, so let's get started.
 
-(Most of the following assumes you already have Xcode installed on your system. If not, go grab it from [[http://developer.apple.com/]] or the Mac App Store, though the latter costs $4.99.)
+(Most of the following assumes you already have Xcode installed on your system. If not, go grab it from the [Mac App Store](http://itunes.apple.com/ca/app/xcode/id448457090?mt=12)
 
 ## Step 1: Install [Homebrew](http://mxcl.github.com/homebrew/)
 
