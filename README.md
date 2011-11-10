@@ -68,7 +68,7 @@ Check that MongoDB is running:
 
 	http://localhost:28017/
 
-## Step 6: Install [MySQL](http://mysql.org/)
+## Step 6: Install [MySQL](http://mysql.org/) (if you're needing to use it)
 
 	brew install mysql
 
@@ -76,13 +76,11 @@ Check that MongoDB is running:
 
 ## Step 7: Install [PHP](http://php.net/) (optionally, but recommended) and [spawn-fcgi](http://redmine.lighttpd.net/projects/spawn-fcgi)
 
-	brew create http://ca2.php.net/distributions/php-5.2.17.tar.gz
+Install PHP 5.2 from our own, modified recipe
 
-When an editor is opened up with the "formula", replace it with the contents of [[https://raw.github.com/gist/1142557/9f5232aa169c121d605292c8062329a1f8132f55/php.rb]].
+	brew install https://raw.github.com/gist/1142557/9f5232aa169c121d605292c8062329a1f8132f55/php.rb --with-mysql
 
-Next, Install PHP
-
-	brew install php --with-mysql
+*Note that --with-mysql should only be used above if you've installed MySQL in Step 6!*
 
 Then install spawn-fcgi:
 
