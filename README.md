@@ -74,6 +74,8 @@ Check that MongoDB is running:
 
 *Note the instructions for copying the .plist file if you want to have MySQL automatically start when you log in.*
 
+### STOP! You probably did not read the above note and probably did not complete the instructions that brew provided after the `brew install mysql` command completed. Your MySQL installation is therefore probably not complete!
+
 ## Step 7: Install [PHP](http://php.net/) (optionally, but recommended) and [spawn-fcgi](http://redmine.lighttpd.net/projects/spawn-fcgi)
 
 Install PHP 5.2 from our own, modified recipe
